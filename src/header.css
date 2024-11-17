@@ -1,0 +1,299 @@
+/* ------------------ Header ------------------ */
+header {
+    /* Flexbox */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    /* Box Model */
+    padding: 1em 2em;
+    width: 100%;
+}
+
+.logo {
+    /* Box Model */
+    width: 72px;
+    margin-right: 2em;
+}
+
+/* ------------------ Navigation ------------------ */
+nav {
+    /* Flexbox */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    /* Box Model */
+    width: 100%;
+    font-size: 0.8rem;
+
+    /* Text & Aesthetic */
+    color: var(--medium-gray);
+}
+
+.drop-menu-list {
+    /* Positioning */
+    position: absolute;
+    left: 20px;
+
+    /* Flexbox */
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+
+    /* Aesthetic */
+    box-shadow: 0 5px 25px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0.5em;
+    z-index: 999;
+
+    /* Box Model */
+    padding: 1.5em 1em;
+    gap: 1em;
+
+    /* Behavior */
+    transition: 0.3s;
+}
+
+.drop-menu-list li p {
+    /* Flexbox */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+
+    /* Box Model */
+    gap: 1em;
+
+    /* Typography */
+    font-size: 0.75rem;
+}
+
+.drob-menu-list li p img {
+    /* Alignment */
+    align-self: center;
+}
+
+.feat-list {
+    /* Positioning */
+    top: 25px;
+    left: -50px;
+
+    /* Box Model */
+    padding-inline: 1em 2em;
+
+    /* Behavior */
+    display: none;
+}
+
+.comp-list {
+    /* Positioning */
+    top: 25px;
+    left: 0;
+
+    /* Box Model */
+    width: 85px;
+
+    /* Behavior */
+    display: none;
+}
+
+/* ------------------ List ------------------ */
+.list {
+    /* Flexbox */
+    display: flex;
+    justify-content: start;
+    align-items: center;
+
+    /* Box Model */
+    width: 100%;
+    gap: 2.5em;
+}
+
+.list li {
+    /* Display */
+    display: inline-block;
+    position: relative;
+
+    /* Behavior */
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.list li:hover {
+    /* Text */
+    color: var(--almost-black);
+}
+
+.drop-down {
+    /* Typography */
+    font-size: inherit;
+}
+
+.drop-down::after {
+    /* Aesthetic */
+    content: url(../images/icon-arrow-down.svg);
+    margin-left: 0.5em;
+}
+
+.drop-down:hover,
+.drop-down:hover::after {
+    /* Aesthetic */
+    content: url(../images/icon-arrow-up.svg);
+}
+
+.feat:hover .feat-list,
+.comp:hover .comp-list {
+    /* Behavior */
+    display: flex;
+}
+
+.drob-menu-list li:hover {
+    /* Text */
+    color: var(--almost-black);
+}
+
+/* ------------------ Buttons ------------------ */
+.btns {
+    /* Alignment */
+    align-self: end;
+
+    /* Box Model */
+    margin-left: auto;
+
+    /* Text & Aesthetic */
+    color: var(--medium-gray);
+}
+
+.btn {
+    /* Box Model */
+    padding: 0.75em 1em;
+}
+
+.reg-btn {
+    /* Box Model */
+    margin-left: 1em;
+    border-radius: 1em;
+
+    /* Border */
+    border: 2px solid var(--medium-gray);
+}
+
+.reg-btn:hover {
+    /* Text */
+    color: var(--almost-black);
+
+    /* Border */
+    border-color: var(--almost-black);
+}
+
+.menu {
+    /* Display */
+    display: none;
+}
+
+/* ------------------ Mobile Screens ------------------ */
+@media (max-width: 768px) {
+    header {
+        /* Box Model */
+        padding: 1.5em 1em;
+    }
+
+    nav {
+        /* Flexbox */
+        flex-direction: column;
+
+        /* Positioning */
+        position: absolute;
+        right: 0;
+        top: 0;
+
+        /* Typography */
+        font-size: 1rem;
+
+        /* Box Model */
+        width: 65%;
+        height: 100%;
+        padding: 1em;
+
+        /* Aesthetic */
+        background-color: var(--almost-white);
+        z-index: 999;
+
+        /* Behavior */
+        display: none;
+        transition: all .2s ease;
+    }
+
+    .list {
+        /* Flexbox */
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+
+        /* Box Model */
+        height: auto;
+        gap: 1.5em;
+        background-color: var(--almost-white);
+    }
+
+    .btns {
+        /* Box Model */
+        width: 100%;
+        margin: 0;
+
+        /* Alignment */
+        align-self: center;
+        text-align: center;
+    }
+
+    .btns button {
+        /* Box Model */
+        width: 100%;
+        margin: 0;
+    }
+
+    .menu {
+        /* Display */
+        display: block;
+    }
+
+    .open {
+        /* Positioning */
+        position: absolute;
+        top: 25px;
+        right: 20px;
+
+        /* Aesthetic */
+        background-color: var(--almost-white);
+    }
+
+    .close-li {
+        /* Alignment */
+        align-self: end;
+    }
+
+    .drop-menu-list {
+        /* Flexbox */
+        justify-content: stretch;
+
+        /* Box Model */
+        width: 100%;
+        padding: 1em 1.5em;
+        padding-top: 1.5em;
+
+        /* Aesthetic */
+        box-shadow: none;
+
+        /* Positioning */
+        position: static;
+
+        /* Z-Index */
+        z-index: 999;
+    }
+
+    .drop-menu-list li p {
+        /* Typography */
+        font-size: 0.95rem;
+    }
+}

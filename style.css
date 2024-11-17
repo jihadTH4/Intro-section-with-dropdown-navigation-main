@@ -1,0 +1,110 @@
+/* ------------------ Imports ------------------ */
+@import url(/src/header.css);
+@import url(/src/hero.css);
+
+/* ------------------ Fonts ------------------ */
+/* epilogue-500 - vietnamese */
+@font-face {
+    font-display: swap;
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 500;
+    src: url('/fonts/epilogue-v17-vietnamese-500.woff2') format('woff2');
+}
+
+/* epilogue-700 - vietnamese */
+@font-face {
+    font-display: swap;
+    font-family: 'Epilogue';
+    font-style: normal;
+    font-weight: 700;
+    src: url('/fonts/epilogue-v17-vietnamese-700.woff2') format('woff2');
+}
+
+/* ------------------ Reset Styles ------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Epilogue', serif;
+}
+
+/* ------------------ Root Variables ------------------ */
+:root {
+    --almost-white: hsl(0, 0%, 98%);
+    --medium-gray: hsl(0, 0%, 41%);
+    --almost-black: hsl(0, 0%, 8%);
+}
+
+/* ------------------ Global Styles ------------------ */
+body {
+    /* Background */
+    background-color: var(--almost-white);
+}
+
+img {
+    /* Box Model */
+    display: block;
+    max-width: 100%;
+    height: auto;
+}
+
+ul {
+    /* List */
+    list-style: none;
+}
+
+p {
+    /* Typography */
+    font-size: 1rem;
+    font-size: clamp(1rem, 0.9642857142857143rem + 0.17857142857142858vw, 1.125rem);
+    color: var(--medium-gray);
+    font-weight: 500;
+}
+
+button {
+    /* Text & Aesthetic */
+    color: inherit;
+    background-color: transparent;
+
+    /* Behavior */
+    border: none;
+    cursor: pointer;
+
+    /* Typography */
+    font-family: inherit;
+}
+
+/* ------------------ Attribution Section ------------------ */
+.attribution {
+    /* Typography */
+    font-size: 11px;
+
+    /* Layout */
+    text-align: center;
+}
+
+.attribution a {
+    /* Typography */
+    color: var(--medium-gray);
+}
+
+/* ------------------ Overlay ------------------ */
+.overlay {
+    /* Positioning */
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    /* Sizing */
+    width: 100%;
+    height: 100%;
+
+    /* Background */
+    background-color: rgba(0, 0, 0, 0.5);
+
+    /* Behavior */
+    display: none;
+    z-index: 998;
+    /* Below the menu but above the main content */
+}
