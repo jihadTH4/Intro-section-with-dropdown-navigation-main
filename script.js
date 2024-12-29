@@ -16,6 +16,6 @@ closeMenuBtn.addEventListener('click', () => {
 
 // Optionally, close the menu by clicking the overlay
 overlay.addEventListener('click', () => {
-    navBar.style.display = 'none';
+    navBar.style.transform = 'translateX(100vh)';
     overlay.style.display = 'none';
 });
