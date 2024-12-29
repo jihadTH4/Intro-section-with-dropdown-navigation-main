@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <!-- Metadata -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="hero.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+
+    <!-- Document Title -->
+    <title>Frontend Mentor | Intro section with dropdown navigation</title>
+  </head>
+
+  <body>
+
+    <div class="overlay"></div>
+    <!-- Header Section -->
+    <header>
+      <!-- Logo -->
+      <img class="logo" src="/images/logo.svg" alt="Snap logo">
+
+      <!-- Navigation Menu -->
+      <nav>
+        <ul class="list">
+          <!-- Close Button for Mobile Menu -->
+          <li class="close-li">
+            <button class="close menu" aria-label="Close menu">
+              <img src="/images/icon-close-menu.svg" alt="Close menu">
+            </button>
+          </li>
+
+          <!-- Features Dropdown -->
+          <li class="feat">
+            <button class="drop-down">Features</button>
+            <ul class="drop-menu-list feat-list">
+              <li>
+                <p><img src="images/icon-todo.svg" alt="Todo list"> Todo List</p>
+              </li>
+              <li>
+                <p><img src="images/icon-calendar.svg" alt="Calendar"> Calendar</p>
+              </li>
+              <li>
+                <p><img src="images/icon-reminders.svg" alt="Reminders"> Reminders</p>
+              </li>
+              <li>
+                <p><img src="images/icon-planning.svg" alt="Planning"> Planning</p>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Company Dropdown -->
+          <li class="comp">
+            <button class="drop-down">Company</button>
+            <ul class="drop-menu-list comp-list">
+              <li>
+                <p>History</p>
+              </li>
+              <li>
+                <p>Our Team</p>
+              </li>
+              <li>
+                <p>Blog</p>
+              </li>
+            </ul>
+          </li>
+
+          <!-- Static Links -->
+          <li>Careers</li>
+          <li>About</li>
+
+          <!-- Login and Register Buttons -->
+          <li class="btns">
+            <button class="btn">Login</button>
+            <button class="reg-btn btn">Register</button>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Open Button for Mobile Menu -->
+      <button class="open menu" aria-label="Open menu">
+        <img src="/images/icon-menu.svg" alt="Menu">
+      </button>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <!-- Hero Image with Responsive Sources -->
+      <picture>
+        <source media="(min-width: 769px)" srcset="images/image-hero-desktop.png">
+        <source media="(max-width: 768px)" srcset="images/image-hero-mobile.png">
+        <img src="/images/image-hero-desktop.png" alt="Hero image">
+      </picture>
+
+      <!-- Hero Content -->
+      <div class="content">
+        <h1>Make remote work</h1>
+        <p>
+          Get your team in sync, no matter your location. Streamline processes,
+          create team rituals, and watch productivity soar.
+        </p>
+        <button class="learn-btn">Learn more</button>
+
+        <!-- Client Logos -->
+        <ul class="clients">
+          <li><img src="images/client-databiz.svg" alt="Databiz"></li>
+          <li><img src="images/client-audiophile.svg" alt="Audiophile"></li>
+          <li><img src="images/client-meet.svg" alt="Meet"></li>
+          <li><img src="images/client-maker.svg" alt="Maker"></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Attribution Section -->
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+      Coded by <a href="#" target="_blank">Jihad Thabit</a>.
+    </div>
+
+    <!-- JavaScript -->
+    <script src="script.js"></script>
+  </body>
+
+</html>
